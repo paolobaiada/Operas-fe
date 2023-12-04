@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="pagina-prenotazione">
+    
+ 
+    <mat-card class="card-prenotazione" style="margin-top: 40px;">
+        <mat-icon style="color: rgb(87, 212, 183);">check_circle_outline</mat-icon>
+        <mat-card-content>
+            <h3>Ordine ricevuto!</h3>
+            <p>Il tuo ordine n°{{prenotazioni[0].numeroOrdine}} è andato a buon fine.</p>
+            <mat-divider></mat-divider>
+            <h3>Info utente</h3>
+            <mat-card-subtitle>DATI DI RESIDENZA</mat-card-subtitle>
+            <p>{{prenotazioni[0].anagrafica.indirizzo}} - {{prenotazioni[0].anagrafica.citta}} ({{prenotazioni[0].anagrafica.provincia}})</p>
+            <mat-divider></mat-divider>
+            <h3>Info spettacolo</h3>
+            <div class="elenco" *ngFor="let p of prenotazioni">
+            <div>
+                <img id="immagine-spettacolo" [src]="'data:image/jpeg;base64,'+ p.spettacolo.immagine ">
+                  {{p.spettacolo.nomeProdotto}} 
+                   {{p.spettacolo.orario}}
+            </div>
+                
+                <div>
+                     
+                {{p.spettacolo.costo.toFixed(2)}}
+                </div>
+             
+            
+            </div>
+            <mat-divider></mat-divider>
+            <div style="display: flex; flex-direction:column; align-items: end;">
+                <p>Sub totale: {{subtotale.toFixed(2)}}</p>
+            <p>Totale: {{totale.toFixed(2)}}</p> 
+            </div>
+           
+        </mat-card-content>
+    </mat-card>
+</div>

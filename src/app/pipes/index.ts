@@ -1,0 +1,6 @@
+export * from './replace.pipe'
+export * from './set-text-by-url.pipe'
+export * from './search-pipe.component'
+export * from './filter-tipologia.pipe'
+export * from './filter-costo.pipe'
+export * from './filter-orario.pipe'

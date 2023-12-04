@@ -1,0 +1,8 @@
+<div class="container">
+<h1 mat-dialog-title class="titolo">Sei sicuro di voler eliminare il tuo profilo?</h1>
+<div mat-dialog-content class="testo">Questa operazione è irreversibile. Cliccando su "Elimina" perderai tutti i tuoi dati.</div>
+<div mat-dialog-actions class="bottoni">
+    <button mat-button mat-dialog-close>ANNULLA</button>
+    <button mat-button mat-dialog-close class="bottone-elimina" (click)="eliminaProfilo(this.user.id)">ELIMINA</button>
+</div>
+</div>

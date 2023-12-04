@@ -1,0 +1,130 @@
+@import "../../../../../assets/scss/variables.scss";
+mat-drawer{
+  width: 20%;
+  margin: 65px 0;
+  height: 100vh;
+  
+}
+mat-toolbar {
+  .icona-nero {
+    color: black;
+    background-color: #000000;
+  }
+  mat-toolbar-row {
+    display: flex;
+
+    justify-content: space-between;
+    
+    .right-item{
+      display: flex;
+      
+    }
+    .right-item > div{
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+    }
+   
+    .container-items{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+  }
+  
+  .round-img-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    cursor: pointer;
+    transition: 0.3s;
+    
+
+    .profile-image {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .profile-avatar {
+      color: #fff;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 500;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .round-img-profile:hover{
+    background-color: rgb(3, 100, 133);
+   
+    
+  }
+  
+}
+
+
+
+.flex-items {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: white;
+}
+
+
+
+.title-content {
+  color: $secondary-color;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+
+
+
+.logo{
+
+  width: 15%;
+  align-items: flex-start;
+  cursor: pointer;
+
+}
+
+.toolbar{
+  background-color: #9B211E;
+}
+
+button.bottone-accedi{
+  display: table-cell;
+  max-width: 600px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.material-icons{
+  filter:invert(100%);
+  padding-right: 2vw;
+}
+.container-right{
+  display: flex;
+  align-items: center;
+}
+.img-carrello{
+  width: 5vw;
+}
+
+
+.bottone-stessa-dimensione {
+  width: 250px; /* Imposta la larghezza desiderata per tutti i pulsanti */
+  height: 40px; /* Imposta l'altezza desiderata per tutti i pulsanti */
+  margin: 5px; /* Imposta uno spazio uniforme tra i pulsanti */
+}

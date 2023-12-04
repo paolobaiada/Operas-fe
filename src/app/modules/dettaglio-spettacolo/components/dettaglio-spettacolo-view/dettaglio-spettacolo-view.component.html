@@ -1,0 +1,87 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="over" position="end">
+    <h5>Carrello</h5>
+    <div *ngFor="let p of prodottoCarrello">
+      <img class="img-carrello" [src]="'data:image/jpeg;base64,' + p?.spettacolo.immagine" />
+
+      <p>{{ p?.spettacolo.nomeProdotto }}</p>
+      <p>{{ p?.spettacolo.costo?.toFixed(2) }}€</p>
+      <p>{{ p?.spettacolo.orario }}</p>
+    </div>
+    <mat-card-subtitle>Sub totale: {{ subTotaleOrdine }} €</mat-card-subtitle>
+    <mat-card-title>Totale: {{ this.totaleOrdine }}</mat-card-title>
+    <button mat-flat-button class="bottone-drawer-1" (click)="prenota(prodottoCarrello)">
+      CONCLUDI L'ORDINE
+    </button>
+    <button mat-stroked-button class="bottone-drawer-2" (click)="navigateTo()">
+      CONTINUA LA RICERCA
+    </button>
+  </mat-drawer>
+  <app-header></app-header>
+
+  <div class="dettaglio-view">
+    <mat-card class="card-dettaglio">
+      <div class="immagine">
+        <mat-card-header>
+          <img mat-card-image class="immagine" style="width: 300px"
+            [src]="'data:image/jpeg;base64,' + dettaglioSpettacolo?.immagine" alt="Immagine dello spettacolo" />
+        </mat-card-header>
+      </div>
+      <div class="testo">
+        <mat-card-content>
+          <mat-card-title>
+            <h3>{{ dettaglioSpettacolo?.nomeProdotto }}</h3>
+          </mat-card-title>
+          <p id="costo">{{ dettaglioSpettacolo?.costo?.toFixed(2) }}€</p>
+
+          <table>
+            <div style="margin-bottom: 20px;">
+              <tr>
+                <td>
+                  <mat-card-subtitle>Tipologia</mat-card-subtitle>
+                </td>
+                <td>
+                  <mat-card-subtitle>Codice prodotto</mat-card-subtitle>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{ dettaglioSpettacolo?.tipologia }}
+                </td>
+                <td>
+                  {{ dettaglioSpettacolo?.codiceProdotto }}
+                </td>
+              </tr>
+            </div>
+
+
+            <tr>
+              <td>
+                <mat-card-subtitle>Descrizione</mat-card-subtitle>
+              </td>
+            </tr>
+            <tr>
+              <td>{{ dettaglioSpettacolo?.descrizione }}</td>
+            </tr>
+          </table>
+
+
+
+        </mat-card-content>
+        <div *ngIf="userSession">
+        <button style="position: absolute; right:40% ;top: 40% ;" mat-flat-button class="bottone"
+          (click)="addToCart();openDialog() ">
+          AGGIUNGI AL CARRELLO
+        </button>
+      </div>
+      <div *ngIf="!userSession">
+        <button style="position: absolute; right:40% ;top: 40% ;" mat-flat-button class="bottone"
+        (click)="login()">
+        ACCEDI PER PRENOTARE
+      </button>
+      </div>
+      </div>
+
+    </mat-card>
+  </div>
+</mat-drawer-container>

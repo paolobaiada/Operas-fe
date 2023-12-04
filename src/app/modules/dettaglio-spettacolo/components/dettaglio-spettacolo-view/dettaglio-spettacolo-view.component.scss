@@ -1,0 +1,83 @@
+.dettaglio-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-dettaglio {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#costo{
+    font-size: 1.5em;
+}
+
+.card-dettaglio .bottone{
+    background-color: #9B211E;
+    color: #FFFFFF
+}
+
+.example-container .bottone-drawer-1{
+    background-color: #9B211E;
+    color: #FFFFFF
+}
+
+.example-container .bottone-drawer-2{
+    background-color: #FFFFFF;
+    color: #9B211E;
+}
+
+
+mat-drawer{
+    width: 20%;
+    margin: 60px 0;
+    
+  }
+.img-carrello{
+    width: 2vw;
+}
+mat-toolbar-row {
+    display: flex;
+
+    justify-content: space-between;
+    
+    .right-item{
+      display: flex;
+      
+    }
+    .right-item > div{
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+    }
+   
+    .container-items{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    
+   
+
+  }
+.first{
+      display: flex;
+      justify-content: space-between;
+     
+    }
+    td{
+      
+     padding-right: 150px;
+     
+    }
+    
+   
+
+

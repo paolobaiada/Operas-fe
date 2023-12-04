@@ -1,0 +1,26 @@
+<mat-drawer-container></mat-drawer-container>
+<app-header></app-header>
+
+<div class="container">
+<app-card-profilo></app-card-profilo>
+<mat-card class="card-dettaglio">
+    <mat-card-content>
+        <p class="data">{{prenotazione?.data | date:'dd/MM/yyy'}}</p>
+        <mat-card-title class="numero-ordine">Dettaglio ordine #{{prenotazione?.numeroOrdine}}</mat-card-title>
+        <br>
+        <table class="tabella">
+            <tr class="container-etichette">
+            <td><mat-card-title>PRODOTTO</mat-card-title></td>
+            <td><mat-card-title>ORARI DISPONIBILI</mat-card-title></td>
+            <td><mat-card-title>PREZZO</mat-card-title></td>
+            </tr>
+            <tr class="container-dati">
+            <td><p><img mat-card-image class="immagine" style="border-radius: 5%;" [src]="'data:image/jpeg;base64,'+prenotazione?.spettacolo.immagine">
+            {{prenotazione?.spettacolo.nomeProdotto}}</p></td>
+            <td><p>{{prenotazione?.spettacolo.orario}}</p></td>
+            <td><p>€ {{prenotazione?.spettacolo.costo.toFixed(2)}}</p></td>
+            </tr>
+        </table>
+    </mat-card-content>
+</mat-card>
+</div>

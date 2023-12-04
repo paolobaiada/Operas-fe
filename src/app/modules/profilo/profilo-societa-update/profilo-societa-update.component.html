@@ -1,0 +1,42 @@
+<h3>Modifica</h3>
+<mat-card>
+    <mat-card-content>
+        <mat-card-title><h4>{{societa.nome}}</h4></mat-card-title>
+        <mat-card-subtitle style="margin: 20px 0;"><h5>Informazioni Generali</h5></mat-card-subtitle>
+        <form class="example-form" [formGroup]="updateSocieta" >
+            <mat-form-field class="example-full-width " style="width: 600px;">
+              <mat-label>Nome</mat-label>
+              <input  matInput placeholder="Nome" formControlName="nome" [(ngModel)]="societa.nome">
+            </mat-form-field>
+
+            <div class="container-form">
+                 <mat-form-field class="example-full-width ">
+                <mat-label>Indirizzo</mat-label>
+                <input matInput placeholder="Indirizzo" formControlName="indirizzo" [(ngModel)]="societa.indirizzo">
+            </mat-form-field>
+            <mat-form-field class="example-full-width ">
+                <mat-label>Nazione</mat-label>
+                <input matInput placeholder="Nazione" formControlName="nazione" [(ngModel)]="societa.nazione">
+            </mat-form-field>
+            <mat-form-field class="example-full-width ">
+                  <mat-label>Provincia</mat-label>
+                  <input matInput placeholder="Provincia" formControlName="provincia" [(ngModel)]="societa.provincia">
+            </mat-form-field>
+            <mat-form-field class="example-full-width ">
+                <mat-label>Città</mat-label>
+                <input matInput placeholder="Città" formControlName="citta" [(ngModel)]="societa.citta">
+            </mat-form-field>
+
+            </div>
+
+           
+
+            <mat-form-field class="example-full-width" style="width: 75vw;">
+                <mat-label>Descrizione</mat-label>
+              <textarea style="height: 10vh;" matInput placeholder="Descrizione"  formControlName="descrizione" [(ngModel)]="societa.descrizione"></textarea>
+            </mat-form-field>
+            <input type="hidden" formControlName="idSocieta" [(ngModel)]="societa.idSocieta">
+            <button mat-button type="submit" (click)="Onsubmit()" style="background-color: #9b211e; color: white; position: absolute; right: 15px; top: 15px; width:150px ;">Modifica</button>
+        </form>
+    </mat-card-content>
+</mat-card>  

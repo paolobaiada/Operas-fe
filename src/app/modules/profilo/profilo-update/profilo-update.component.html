@@ -1,0 +1,83 @@
+
+<mat-card >
+    <mat-card-content>
+        <form>        
+            <form class="example-form" [formGroup]="updateAnagrafica" (click)="onSubmit">
+                <div class="intestazione">
+                    <mat-card-title class="titolo">{{anagrafica.nome}} {{anagrafica.cognome}}</mat-card-title>
+                    <button mat-button class="bottone" type="submit" (click)="onSubmit()">Salva</button>
+                </div>
+                <mat-card-subtitle class="titolo">Dati anagrafici</mat-card-subtitle>
+                <br>
+                <div class="containerInput">
+                <mat-form-field class="example-full-width" class="inputGrandi">
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Nome" formControlName="nome" [(ngModel)]="anagrafica.nome">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" class="inputGrandi">
+                    <mat-label>Cognome</mat-label>
+                    <input matInput placeholder="Cognome" formControlName="cognome" [(ngModel)]="anagrafica.cognome">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" class="inputGrandi">
+                    <mat-label>Scegli</mat-label>
+                  <mat-select formControlName="genere" [(ngModel)]="anagrafica.genere">
+                    <mat-option value="M">Maschio</mat-option>
+                    <mat-option value="F">Femmina</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width" class="inputGrandi">
+                    <mat-label>Data di nascita</mat-label>
+                    <input matInput type="date" placeholder="Genere" formControlName="dataNascita"
+                        [(ngModel)]="anagrafica.dataNascita">
+                </mat-form-field>
+                </div>
+                <div class="containerInput">
+                <mat-form-field class="inputPiccoli">
+                    <mat-label>Nazione</mat-label>
+                    <input matInput placeholder="Nazione" formControlName="nazione" [(ngModel)]="anagrafica.nazione">
+                </mat-form-field>
+                <mat-form-field class="inputPiccoli">
+                    <mat-label>Provincia</mat-label>
+                    <input matInput placeholder="Provincia" formControlName="provincia"
+                        [(ngModel)]="anagrafica.provincia">
+                </mat-form-field>
+                <mat-form-field class="inputPiccoli">
+                    <mat-label>Città</mat-label>
+                    <input matInput placeholder="Città" formControlName="citta" [(ngModel)]="anagrafica.citta">
+                </mat-form-field>
+                <mat-form-field class="inputPiccoli">
+                    <mat-label>Indirizzo</mat-label>
+                    <input matInput placeholder="Indirizzo" formControlName="indirizzo"
+                        [(ngModel)]="anagrafica.indirizzo">
+                </mat-form-field>
+                </div>
+                </form>
+            <form class="example-form" [formGroup]="updateUser">
+                <mat-card-subtitle class="titolo">Dati di accesso</mat-card-subtitle>
+                <br>
+                <div class="containerInput">
+                <mat-form-field class="inputGrandi">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" placeholder="email" formControlName="email"
+                        [(ngModel)]="user.email">
+                </mat-form-field>
+                <mat-form-field class="inputGrandi">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" placeholder="Password" formControlName="password"
+                        [(ngModel)]="user.password">
+                </mat-form-field>
+                </div>
+                </form>
+        </form>
+        <div class="intestazione">
+            <div class="testo">
+                <mat-card-subtitle class="titolo">Gestione Account</mat-card-subtitle>
+                <mat-card-subtitle>Puoi eliminare il tuo account e tutti i dati associati ad esso</mat-card-subtitle>
+            </div>
+            <div>
+                <button mat-flat-button class="bottone-bianco" (click)="eliminaProfilo()">Elimina</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+

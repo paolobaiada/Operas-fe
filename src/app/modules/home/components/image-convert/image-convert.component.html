@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="left">
+  <div>
+    <div class="drop-zone" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+
+      <div *ngIf="base64Image">
+        <img [src]="base64Image" alt="Immagine" style="height: 295px;width: 325px; border-radius: 5px;">
+      </div>
+
+    </div>
+    <input type="file" style="display: none;" (change)="onFileSelected($event)" accept="image/*" id="fileInput">
+  </div>
+
+   <div class="button">
+    <button (click)="triggerFileInput()">CARICA IMMAGINE</button>
+   </div>
+</div>
+
+</div>
+
+
+
+ 
+  

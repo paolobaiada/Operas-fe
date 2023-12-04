@@ -1,0 +1,76 @@
+mat-card{
+    margin-top: 20px;
+     
+}
+mat-card-content{
+    padding: 20px;
+   
+  
+}
+mat-form-field{
+  width: 15%
+}
+
+.right{
+    height: 250px;
+    width: 100%;
+    margin-right: 10px;
+   
+  }
+  .container{
+    display: flex;
+    gap: 15px;
+  
+   
+      }
+      
+      .second-container{
+        display: flex;
+        gap: 10px;
+      }
+      .costo{
+     
+        margin-right: 10%;
+       
+      }
+      .nomeprodotto{
+        width: 70%;
+      }
+      .button{
+        position: absolute;
+        left: 90%;
+        bottom: 5%;
+        background-color:  #9b201e;
+        width: 110px ;
+         text-align: center;
+      }
+      .button button{
+        color: white;
+       
+      }
+      .descrizione{
+        width: 90%;
+        display: block;
+      }
+     .drop-zone {
+  width: 330px;
+  height: 300px;
+    border: 2px dashed #8b8989;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.053);
+    border-radius: 5px;
+  }
+  .carica-immagine{
+    background-color: black;
+   width: 330px;
+    height: 30px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    
+  }
+  .carica-immagine button{
+    color: white;
+  }

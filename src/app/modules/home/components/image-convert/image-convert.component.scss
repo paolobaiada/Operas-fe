@@ -1,0 +1,25 @@
+.drop-zone {
+  width: 330px;
+  height: 300px;
+    border: 2px dashed #8b8989;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.053);
+    border-radius: 5px;
+  }
+  .carica-immagine{
+    background-color: black;
+   width: 330px;
+    height: 30px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+  }
+  .button button{
+    color: white;
+    font-size: 12px;
+  }
+  
+  
+  

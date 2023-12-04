@@ -1,0 +1,71 @@
+
+<!-- <div class="intestazioni">
+    <p>Nome Prodotto</p>
+    <p>Tipologia</p>
+    <p>Costo</p>
+    <p>Orario</p>
+</div>
+<mat-card>
+    
+    <mat-card-content *ngFor="let item of listaSpettacolo">
+        <div>{{item.nomeProdotto}}</div>
+        <div> {{item.tipologia}}</div>
+        <div>{{item.costo}}</div>
+        <div>{{item.orario}}</div>
+       
+    </mat-card-content>
+   
+  </mat-card> -->
+
+  <mat-card>
+
+<!-- profilo-admin-spettacoli.component.html -->
+
+  <div *ngIf="listaSpettacolo.length > 0 ">
+    <!-- Includi qui il codice HTML per visualizzare il grafico -->
+    <mat-card class="custom-card">
+      <mat-card-content>
+        <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'250px'}"></canvasjs-chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="listaSpettacolo.length > 0">
+    <mat-card>
+      <mat-card-content>
+    <canvasjs-chart [options]="chart" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
+    </mat-card-content>    
+  </mat-card>
+</div> 
+
+ 
+  <mat-card *ngIf="listaSpettacolo.length >= 0">
+
+    <mat-card-content>
+        <table>
+            <th>
+                <tr class="center">Nome Prodotto</tr>
+            </th>
+            <th>
+                <tr class="center">Tipologia</tr>
+            </th>
+            <th>
+                <tr class="center">Costo</tr>
+            </th>
+            <th>
+                <tr class="center">Orario</tr>
+            </th>
+            <tr *ngFor="let item of listaSpettacolo">
+                <td>{{item.nomeProdotto}}</td>
+                <td>{{item.tipologia}}</td>
+                <td>{{item.costo}}</td>
+                <td>{{item.orario}}</td>
+                <td><i class="material-icons" (click)="updateSpettacolo(item.idSpettacolo)">create</i></td>
+                <td class="click" (click)="deleteSpettacolo(item.idSpettacolo)"><i class="material-icons" >delete</i></td>
+            </tr>
+            
+           
+         </table>
+          
+    </mat-card-content>
+  </mat-card>
+ 

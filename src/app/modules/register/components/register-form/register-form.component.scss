@@ -1,0 +1,111 @@
+@import "../../../../../assets/scss/variables.scss";
+.register-page{
+    background-image: url("https://tinyurl.com/yckhx76f");
+    display: flex;
+    flex-direction: column;
+    background-size:cover ;
+    height: 100vh;
+
+}
+
+.img-pointer{
+    width: 15%;
+    align-items: flex-start;
+}
+
+.register-card {
+    width: 50vw;
+    margin: 5% auto;
+  }
+
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.titolo{
+  color: #9B211E;
+}
+
+.bottone{
+  background-color: #9B211E !important;
+  color: #FFFFFF !important
+}
+
+.bottoneBianco{
+  background-color: #FFFFFF !important;
+  color: #9B211E !important;
+  border: #9B211E 1px solid !important;
+}
+
+.bottone-login{
+  background-color: transparent !important;
+  color: #9B211E !important
+}
+
+.body-registrazione{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 10px
+}
+
+.body-registrazione .input{
+  display: inline-block;
+  width: 48%;
+}
+
+.body-registrazione .inputPiccoli{
+  display: inline-block;
+  width: 22%;
+  margin-right: 5px;
+}
+
+.riga-bottoni{
+  width: 100%;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+}
+
+.divider{
+  width: 700px;
+}
+
+.informativa{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.inputSocieta{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputD{
+  height: 125px;
+}
+
+.inputQ{
+  display: inline-block;
+  width: 24%;
+  margin-right: 5px;
+}

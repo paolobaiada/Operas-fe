@@ -1,0 +1,17 @@
+.intestazione{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container{
+    width: 100%;
+}
+
+.dati{
+    font-weight: bold;
+}
+
+.intestazione p{
+    font-weight: bold;
+}

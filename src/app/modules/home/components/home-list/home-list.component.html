@@ -1,0 +1,62 @@
+
+<mat-drawer-container>
+<app-header></app-header>
+    <div class="header">
+        
+    <h1 class="testo-header">TROVA IL GIUSTO<br>SPETTACOLO PER TE</h1>
+</div>
+<div class="home-content-container">
+    
+    <div class="home-content">
+        <div class="barra-ricerche">
+            <div class="filtri">
+                
+                <mat-form-field>
+                    <mat-label>Tipologia</mat-label>
+                    <mat-select [(ngModel)]="tipologia">
+                        <mat-option *ngFor="let t of sceltaTipo" [value]="t">{{t}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Costo</mat-label>
+                    <mat-select [(ngModel)]="costo">
+                        <mat-option *ngFor="let c of sceltaCosto" [value]="c">{{c}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Orario</mat-label>
+                    <mat-select [(ngModel)]="orario">
+                        <mat-option *ngFor="let o of sceltaOrario" [value]="o">{{o}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+    
+            <div class="ricerca">
+                <mat-form-field>
+                    <mat-label>Ricerca spettacoli</mat-label>
+                    <input matInput type="text" [(ngModel)]="ricerca">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="elenco-card">
+            <mat-card class="example-card" *ngFor="let s of listaSpettacolo | search : ricerca | tipologia : tipologia | costo : costo| orario : orario">
+                <img mat-card-image [src]="'data:image/jpeg;base64,'+ s.immagine " alt="Immagine dello spettacolo">
+                <mat-card-content>
+                    <mat-card-title>{{s.nomeProdotto}}</mat-card-title>
+                    <mat-card-subtitle>{{s.tipologia}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{s.orario}}</mat-card-subtitle>
+                    <p class="costo">{{s.costo.toFixed(2)}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button class="bottone" (click)="navigateTo(s.idSpettacolo)">ACQUISTA</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+
+</mat-drawer-container>
+

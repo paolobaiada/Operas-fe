@@ -1,0 +1,67 @@
+
+
+<h3>Modifica spettacolo</h3>
+<mat-card>
+    <mat-card-content>
+        
+
+        <div class="container">
+            <div class="left">
+                <div>
+                    <div class="drop-zone" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)" >
+                      <div *ngIf="base64Image" >
+                        <img mat-card-image [src]="dettaglioSpettacolo.immagine"  alt="Immagine" style="height: 295px;width: 325px; border-radius: 5px;" >
+                      </div>
+                    </div>
+                    <input type="file" style="display: none;" (change)="onFileSelected($event)" accept="image/*" id="fileInput" >
+                  </div>
+                
+                   <div class="carica-immagine">
+                    <button (click)="triggerFileInput()">CARICA IMMAGINE</button>
+                   </div>
+          </div>
+          <div class="right">
+            <form novalidate [formGroup]="spettacoloForm">
+                <mat-form-field class="nomeprodotto">
+                  <mat-label>Nome Spettacolo</mat-label>
+                  <input matInput type="text"  formControlName="nomeProdotto" required [(ngModel)]="dettaglioSpettacolo.nomeProdotto">
+                </mat-form-field>
+                <div class="second-container">
+                      <mat-form-field>
+                  <mat-label>Codice prodotto</mat-label>
+                  <input matInput type="text"  formControlName="codiceProdotto" required  [(ngModel)]="dettaglioSpettacolo.codiceProdotto">
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Orario</mat-label>
+                  <input matInput type="time" formControlName="orario" required  [(ngModel)]="dettaglioSpettacolo.orario">
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Tipologia</mat-label>
+                  <mat-select formControlName="tipologia"  [(ngModel)]="dettaglioSpettacolo.tipologia">
+                    <mat-option value="HORROR">HORROR</mat-option>
+                    <mat-option value="COMMEDIA">COMMEDIA</mat-option>
+                    <mat-option value="ROMANTICO">ROMANTICO</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                 <mat-form-field >
+                  <mat-label>Costo</mat-label>
+                  <input matInput type="text" formControlName="costo" required  [(ngModel)]="dettaglioSpettacolo.costo">
+                </mat-form-field>
+                </div>
+              
+                <mat-form-field class="descrizione">
+                  <mat-label>Descrizione</mat-label>
+                  <input matInput type="text"  formControlName="descrizione" required  [(ngModel)]="dettaglioSpettacolo.descrizione">
+                </mat-form-field>
+
+                
+                <div class="button">
+                  <button mat-button type="submit" (click)="onClick()">Inserisci</button>
+                </div>
+              </form> <!-- Aggiunta la chiusura del tag form -->
+          </div>
+          </div>
+          
+    </mat-card-content>
+</mat-card>
+

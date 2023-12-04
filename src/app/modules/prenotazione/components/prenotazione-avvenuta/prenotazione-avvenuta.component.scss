@@ -1,0 +1,33 @@
+.pagina-prenotazione{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.062);
+    height: 100vh;
+}
+
+.card-prenotazione{
+    width: 60vw;
+    padding: 20px;
+}
+
+#immagine-spettacolo{
+    width: 10vw;
+}
+img{
+    width: 200px;
+}
+mat-icon{
+    padding: 50px;
+   font-size: 50px;
+   margin-bottom: 30px;
+    
+}
+mat-divider{
+    margin: 20px 0;
+}
+.elenco{
+    display: flex;
+    justify-content: space-between;
+    
+}

@@ -1,0 +1,62 @@
+<div *ngIf="user">
+    <mat-card style="margin-top: 5%;">
+        <mat-card-content>
+            <div class="intestazione">
+                <p>{{anagrafica.nome}} {{anagrafica.cognome}}</p>
+                <button mat-stroked-button (click)="updateUser()">MODIFICA</button>
+            </div>
+            <table class="container">
+                <tr>
+                    <td><mat-card-subtitle>EMAIL</mat-card-subtitle></td>
+                    <td><mat-card-subtitle>PASSWORD</mat-card-subtitle></td>
+                    <td><mat-card-subtitle>DATA DI NASCITA</mat-card-subtitle></td>
+                    <td><mat-card-subtitle>GENERE</mat-card-subtitle></td>
+                    <td><mat-card-subtitle>INDIRIZZO</mat-card-subtitle></td>
+                </tr>
+                <tr class="dati">
+                    <td>
+                        <p>{{user.email}}</p>
+                    </td>
+                    <td>
+                        <p>{{user.password}}</p>
+                    </td>
+                    <td>
+                        <p>{{anagrafica.dataNascita}}
+                        <p>
+                    </td>
+                    <td>
+                        <p>{{anagrafica.genere}}</p>
+                    </td>
+                    <td>
+                        <p>{{anagrafica.indirizzo}} - {{anagrafica.provincia}}, {{anagrafica.nazione}}</p>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+<br>
+<div *ngIf="societa">
+    <mat-card *ngIf="user.usertype === 'ADMIN'" style="margin-top: 3%;">
+        <mat-card-content>
+            <div class="intestazione">
+                <p>{{societa.nome}}</p>
+                <button mat-stroked-button (click)="updateSocieta()">MODIFICA</button>
+            </div>
+            <table class="container">
+                <tr>
+                    <td><mat-card-subtitle>INDIRIZZO</mat-card-subtitle></td>
+                    <td><mat-card-subtitle>DESCRIZIONE</mat-card-subtitle></td>
+                </tr>
+                <tr class="dati">
+                    <td>
+                        <p>{{societa.indirizzo}} - {{societa.provincia}}, {{societa.nazione}}</p>
+                    </td>
+                    <td>
+                        <p>{{societa.descrizione}}</p>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,41 @@
+mat-card{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.intestazione{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titolo{
+    font-weight: bold;
+}
+
+.bottone{
+    background-color: #9B211E;
+    color: #FFFFFF;
+}
+
+.containerInput{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputGrandi{
+    width: 49%;
+}
+
+.inputPiccoli{
+    width: 24%;
+}
+
+.bottone-bianco{
+    background-color: #FFFFFF;
+    color: #9B211E;
+    border: #9B211E 1px solid;
+}

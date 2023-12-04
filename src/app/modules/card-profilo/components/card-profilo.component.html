@@ -1,0 +1,35 @@
+<div class="card-container">
+    <p class="titolo">Profilo personale</p>
+    <br>
+    <mat-card class="card-profilo">
+        <div class="intestazione">
+            <div class="flex-items" *ngIf="user">
+                <div class="round-img-profile">
+                    <div class="profile-avatar">
+                        <p>
+                            {{ (user.email | slice : 0 : 1 | uppercase) || ""}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <mat-card-content>
+            
+            <br>
+            <br>
+            <mat-card-title class="titolo">{{anagrafica.nome}} {{anagrafica.cognome}}</mat-card-title>
+            <p>{{user.email}}</p>
+            <br>
+            <mat-card-subtitle>GENERE</mat-card-subtitle>
+            <p>{{anagrafica.genere}}</p>
+            <br>
+            <mat-card-subtitle>DATA DI NASCITA</mat-card-subtitle>
+            <p>{{anagrafica.dataNascita}}</p>
+            <br>
+            <mat-card-subtitle>DATI DI RESIDENZA</mat-card-subtitle>
+            <p>{{anagrafica.indirizzo}} - {{anagrafica.citta}} ({{anagrafica.provincia}})</p>
+
+            <button mat-stroked-button class="bottone" (click)="update()">MODIFICA</button>
+        </mat-card-content>
+    </mat-card>
+</div>
